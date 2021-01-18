@@ -11,18 +11,14 @@
     />
     <link rel="stylesheet" href="./css/tailwind.css" />
   </head>
-  <body class="box-border h-full flex flex-col">
+  <body class="box-border h-full">
     <header class="w-full h-full bg-black flex flex-col p-5">
       <div
-        class="flex flex-col flex-grow justify-evenly items-center landscape:flex-row"
+        class="flex flex-col flex-grow justify-evenly items-center landscape:flex-row landscape:justify-around"
       >
         <div>
           <h1 class="font-hand text-white text-5xl">Hello</h1>
-          <h2 class="font-hand text-white text-center mt-4 hidden landscape:block">
-            I'm watching ;)
-          </h2>
         </div>
-
         <div class="flex flex-col items-center p-5 landscape:p-0">
           <img
             class="rounded-full object-cover w-9/2 h-auto img landscape:w-48"
@@ -41,9 +37,7 @@
                 />
               </g>
             </svg>
-            <h2 class="font-hand text-white text-center">
-              This is me and I'm watching ;)
-            </h2>
+            <h2 class="font-hand text-white text-center">This is me</h2>
           </div>
         </div>
       </div>
@@ -61,5 +55,22 @@
         </svg>
       </div>
     </header>
+    <main class="h-full bg-white">
+      <div class="p-5">
+        <div>
+          <!-- svg -->
+        </div>
+        <div>
+          <h3 class="font-hand text-black font-bold text-4xl text-center">Who am I?</h3>
+          <p class="font-hand text-black mt-4">
+            What can I say? A young guy with a lack of experience, but with a
+            love of programming, especially frontend development, who dreams of
+            becoming a junior developer. You can see my home project. You can
+            see my resume. You can evaluate me on my skills. But you can also
+            give me a chance and not regret it.
+          </p>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
