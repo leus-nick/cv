@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Welcome</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap"
@@ -11,28 +11,27 @@
     />
     <link rel="stylesheet" href="./css/tailwind.css" />
   </head>
-  <body>
-    <header
-      class="w-full h-screen bg-black py-5 px-5 flex flex-col justify-between items-center resHeader"
-    >
+  <body class="box-border h-full flex flex-col">
+    <header class="w-full h-full bg-black flex flex-col p-5">
       <div
-        class="w-full flex flex-1 flex-col justify-evenly items-center sm:flex-row sm:justify-around"
+        class="flex flex-col flex-grow justify-evenly items-center landscape:flex-row"
       >
-        <h1
-          class="text-white text-center text-7xl leading-none font-hand font-extrabold"
-        >
-          Hello
-        </h1>
-        <div class="flex flex-col justify-center">
+        <div>
+          <h1 class="font-hand text-white text-5xl">Hello</h1>
+          <h2 class="font-hand text-white text-center mt-4 hidden landscape:block">
+            I'm watching ;)
+          </h2>
+        </div>
+
+        <div class="flex flex-col items-center p-5 landscape:p-0">
           <img
-            class="rounded-full p-5 w-72 h-72 resImg"
-            src="https://i.pinimg.com/originals/39/e9/b3/39e9b39628e745a39f900dc14ee4d9a7.jpg"
-            alt="photo of the man"
+            class="rounded-full object-cover w-9/2 h-auto img landscape:w-48"
+            src="./img/IMG_7922-1(2).jpg"
+            alt="a photo of the man"
           />
-          <div class="flex flex-row justify-center">
-            <h2 class="font-hand text-white text-3xl">This is me</h2>
+          <div class="flex flex-col items-center mt-4 landscape:hidden">
             <svg
-              class="stroke-current fill-current text-white w-14 h-14"
+              class="stroke-current fill-current text-white w-9 h-9"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 36.86 98.92"
             >
@@ -42,12 +41,15 @@
                 />
               </g>
             </svg>
+            <h2 class="font-hand text-white text-center">
+              This is me and I'm watching ;)
+            </h2>
           </div>
         </div>
       </div>
-      <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-row flex-grow-0 justify-center">
         <svg
-          class="stroke-current fill-current text-white animate-bounce mt-2 w-8 h-8"
+          class="stroke-current fill-current text-white w-8 h-8 animate-bounce"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 31.33 91.41"
         >

@@ -1,24 +1,21 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
+    // screens: {
+    //   "sml": "480px",
+    //   "md": "768px",
+    //   "mdl": "992px",
+    //   "xl": "1200px",
+    //   "2xl": "1536px",
+    // },
     extend: {
-      scale: {
-        "1": "-1",
-      },
-      rotate: {
-        "-120": "-120deg",
-      },
-      strokeWidth: {
-        "3": "3",
-        "4": "4",
-      },
-      fontSize: {
-        "10xl": "10rem",
-      },
       fontFamily: {
         hand: ['"Hachi Maru Pop"', "cursive"],
       },
+      screens: {
+      "landscape": {"raw": "(orientation: landscape)"},
+      }
     },
   },
   variants: {
