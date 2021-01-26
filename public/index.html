@@ -62,13 +62,14 @@
 
       <div class="h-full flex flex-col p-10 landscape:flex-row">
         <div
+          id="my-div"
           class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
         >
-          <img
+          <!-- <img
             class="object-cover h-px min-h-full"
             src="./img/SVG/man.svg"
             alt="placeholder"
-          />
+          /> -->
         </div>
         <div
           class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
@@ -79,7 +80,7 @@
             Who am I?
           </h3>
           <p
-            class="font-hand text-black mt-4 mb-8 text-sm sm:text-lg md:px-24 paragraphText"
+            class="font-hand text-black mt-4 mb-8 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
           >
             What can I say? A young guy with a lack of experience, but with a
             love of programming, especially frontend development, who dreams of
@@ -109,7 +110,7 @@
             What about my skils?
           </h3>
           <p
-            class="font-hand text-white mt-4 mb-8 text-sm sm:text-lg md:px-24 paragraphText"
+            class="font-hand text-white mt-4 mb-8 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
           >
             What can I say? A young guy with a lack of experience, but with a
             love of programming, especially frontend development, who dreams of
@@ -141,7 +142,7 @@
             What about my experience?
           </h3>
           <p
-            class="font-hand text-black mt-4 mb-9 text-sm sm:text-lg md:px-24 paragraphText"
+            class="font-hand text-black mt-4 mb-9 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
           >
             What can I say? A young guy with a lack of experience, but with a
             love of programming, especially frontend development, who dreams of
@@ -220,31 +221,17 @@
         </div>
       </div>
     </main>
+    <script
+      crossorigin
+      src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js"
+    ></script>
     <script>
-      // Get the id of the <path> element and the length of <path>
-      var path = document.getElementById("path");
-      var length = path.getTotalLength();
-
-      // The start position of the drawing
-      path.style.strokeDasharray = length;
-
-      // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
-      path.style.strokeDashoffset = length;
-
-      // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
-      window.addEventListener("scroll", myFunction);
-
-      function myFunction() {
-        var scrollpercent =
-          (document.body.scrollTop + document.documentElement.scrollTop) /
-          (document.documentElement.scrollHeight -
-            document.documentElement.clientHeight);
-
-        var draw = length * scrollpercent;
-
-        // Reverse the drawing (when scrolling upwards)
-        path.style.strokeDashoffset = length - draw;
-      }
+      new Vivus("my-div", {
+        duration: 200,
+        type: 'sync',
+        pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
+        file: "./img/SVG/man.svg",
+      });
     </script>
   </body>
 </html>
