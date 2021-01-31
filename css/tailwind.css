@@ -1,5 +1,10 @@
 @tailwind base;
 @tailwind components;
+
+#skills-div > svg {
+  @apply stroke-current text-white;
+}
+
 @tailwind utilities;
 
 @media (orientation: landscape) and (max-width: 950px) {

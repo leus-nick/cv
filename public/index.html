@@ -62,15 +62,9 @@
 
       <div class="h-full flex flex-col p-10 landscape:flex-row">
         <div
-          id="my-div"
+          id="about-div"
           class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
-        >
-          <!-- <img
-            class="object-cover h-px min-h-full"
-            src="./img/SVG/man.svg"
-            alt="placeholder"
-          /> -->
-        </div>
+        ></div>
         <div
           class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
         >
@@ -95,14 +89,9 @@
 
       <div class="h-full bg-black flex flex-col p-10 landscape:flex-row">
         <div
+          id="skills-div"
           class="flex flex-grow justify-center order-2 landscape:order-1 landscape:flex-1"
-        >
-          <img
-            class="object-cover h-px min-h-full"
-            src="./img/SVG/man_white.svg"
-            alt="placeholder"
-          />
-        </div>
+        ></div>
         <div class="flex flex-col landscape:flex-1 landscape:justify-center">
           <h3
             class="font-hand text-white font-bold text-3xl text-center sm:text-4xl"
@@ -125,14 +114,9 @@
 
       <div class="h-full flex flex-col p-10 landscape:flex-row">
         <div
+          id="exp-div"
           class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
-        >
-          <img
-            class="object-cover h-px min-h-full"
-            src="./img/SVG/man.svg"
-            alt="placeholder"
-          />
-        </div>
+        ></div>
         <div
           class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1"
         >
@@ -226,11 +210,23 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js"
     ></script>
     <script>
-      new Vivus("my-div", {
+      new Vivus("about-div", {
         duration: 200,
-        type: 'sync',
+        type: "sync",
         pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
-        file: "./img/SVG/man.svg",
+        file: "./img/SVG/about_1.svg",
+      });
+      new Vivus("skills-div", {
+        duration: 200,
+        type: "sync",
+        pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
+        file: "./img/SVG/skills_1.svg",
+      });
+      new Vivus("exp-div", {
+        duration: 200,
+        type: "sync",
+        pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
+        file: "./img/SVG/xp_1.svg",
       });
     </script>
   </body>
