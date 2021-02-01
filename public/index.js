@@ -1,1 +1,30 @@
-import { motion } from "../node_modules/framer-motion/dist/framer-motion";
+let page = new FullPage("#main",{
+
+  // section selector
+  section: '.section',
+
+  // animation options
+  animationDuration: 700,
+  animationTiming: 'ease',
+  animationTranform: 'transform',
+
+  // enable side navigation
+  pagination: true,
+
+  // enable keyboard navigation
+  keyboard: true,
+
+  // enable touch events
+  touch: true,
+
+  // touch limit in ms
+  touchLimit: 100,
+
+  // infinite loop
+  loop: false,
+
+  // callbacks
+  onLeave: null,
+  afterLoad: null,
+  
+});

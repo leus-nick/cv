@@ -57,10 +57,10 @@
         </svg>
       </div>
     </header>
-    <main class="h-full bg-white">
+    <main id="main" class="h-full bg-white scroll-container">
       <!-- WHO AM I SECTION -->
 
-      <div class="h-full flex flex-col p-10 landscape:flex-row">
+      <section id="about" class="h-full flex flex-col p-10 landscape:flex-row">
         <div
           id="about-div"
           class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
@@ -83,11 +83,11 @@
             give me a chance and not regret it.
           </p>
         </div>
-      </div>
+      </section>
 
       <!-- MY SKILLS> SECTION -->
 
-      <div class="h-full bg-black flex flex-col p-10 landscape:flex-row">
+      <section class="h-full bg-black flex flex-col p-10 landscape:flex-row">
         <div
           id="skills-div"
           class="flex flex-grow justify-center order-2 landscape:order-1 landscape:flex-1"
@@ -108,11 +108,11 @@
             give me a chance and not regret it.
           </p>
         </div>
-      </div>
+      </section>
 
       <!-- MY EXPERIENCE SECTION -->
 
-      <div class="h-full flex flex-col p-10 landscape:flex-row">
+      <section class="h-full flex flex-col p-10 landscape:flex-row">
         <div
           id="exp-div"
           class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
@@ -135,11 +135,11 @@
             give me a chance and not regret it.
           </p>
         </div>
-      </div>
+      </section>
 
       <!-- CONTACTS SECTION -->
 
-      <div
+      <section
         class="h-full bg-black flex flex-col p-5 items-center justify-center"
       >
         <h3 class="font-hand text-white font-bold text-2xl text-center">
@@ -203,18 +203,19 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <script
+      type="text/javascript"
       crossorigin
       src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js"
     ></script>
-    <script>
+    <script type="text/javascript">
       new Vivus("about-div", {
         duration: 200,
         type: "sync",
         pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
-        file: "./img/SVG/about_1.svg",
+        file: "./img/SVG/about.svg",
       });
       new Vivus("skills-div", {
         duration: 200,
@@ -228,6 +229,35 @@
         pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
         file: "./img/SVG/xp_1.svg",
       });
+    </script>
+    <script type="text/javascript">
+      // Get the position on the page of the SVG
+      var svgLocation = document
+        .getElementById("about")
+        .getBoundingClientRect();
+
+      // Scroll offset that triggers animation start.
+      // In this case it is the bottom of the SVG.
+      var offsetToTriggerAnimation = svgLocation.y + svgLocation.height;
+
+      // Function to handle the scroll event.
+      // Add an event handler to the document for the "onscroll" event
+      function scrollAnimTriggerCheck(evt) {
+        var viewBottom = window.scrollY + window.innerHeight;
+        if (viewBottom > offsetToTriggerAnimation) {
+          let count = document.getElementsByTagName("animate").length;
+          console.log(count);
+          // Start the SMIL animation
+          for (i = 0; i < count; i++) {
+            document.getElementById(`anim_${i}`).beginElement();
+          }
+          // Remove the event handler so it doesn't trigger again
+          document.removeEventListener("scroll", scrollAnimTriggerCheck);
+        }
+      }
+
+      // Add an event handler to the document for the "onscroll" event
+      document.addEventListener("scroll", scrollAnimTriggerCheck);
     </script>
   </body>
 </html>
