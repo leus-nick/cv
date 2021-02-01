@@ -11,8 +11,12 @@
     />
     <link rel="stylesheet" href="./css/tailwind.css" />
   </head>
-  <body class="box-border h-full relative">
-    <header class="w-full h-full bg-black flex flex-col p-5">
+  <body class="box-border h-full">
+    <section
+      id="s0"
+      name="hello"
+      class="w-full h-full bg-black flex flex-col p-5"
+    >
       <div
         class="flex flex-col flex-grow items-center landscape:flex-row landscape:justify-around"
       >
@@ -56,157 +60,168 @@
           </g>
         </svg>
       </div>
-    </header>
-    <main id="main" class="h-full bg-white scroll-container">
-      <!-- WHO AM I SECTION -->
+    </section>
+    <!-- WHO AM I SECTION -->
 
-      <section id="about" class="h-full flex flex-col p-10 landscape:flex-row">
-        <div
-          id="about-div"
-          class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
-        ></div>
-        <div
-          class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
-        >
-          <h3
-            class="font-hand text-black font-bold text-3xl text-center sm:text-4xl"
-          >
-            Who am I?
-          </h3>
-          <p
-            class="font-hand text-black mt-4 mb-8 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
-          >
-            What can I say? A young guy with a lack of experience, but with a
-            love of programming, especially frontend development, who dreams of
-            becoming a junior developer. You can see my home project. You can
-            see my resume. You can evaluate me on my skills. But you can also
-            give me a chance and not regret it.
-          </p>
-        </div>
-      </section>
-
-      <!-- MY SKILLS> SECTION -->
-
-      <section class="h-full bg-black flex flex-col p-10 landscape:flex-row">
-        <div
-          id="skills-div"
-          class="flex flex-grow justify-center order-2 landscape:order-1 landscape:flex-1"
-        ></div>
-        <div class="flex flex-col landscape:flex-1 landscape:justify-center">
-          <h3
-            class="font-hand text-white font-bold text-3xl text-center sm:text-4xl"
-          >
-            What about my skils?
-          </h3>
-          <p
-            class="font-hand text-white mt-4 mb-8 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
-          >
-            What can I say? A young guy with a lack of experience, but with a
-            love of programming, especially frontend development, who dreams of
-            becoming a junior developer. You can see my home project. You can
-            see my resume. You can evaluate me on my skills. But you can also
-            give me a chance and not regret it.
-          </p>
-        </div>
-      </section>
-
-      <!-- MY EXPERIENCE SECTION -->
-
-      <section class="h-full flex flex-col p-10 landscape:flex-row">
-        <div
-          id="exp-div"
-          class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
-        ></div>
-        <div
-          class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1"
-        >
-          <h3
-            class="font-hand text-black font-bold text-3xl text-center sm:text-4xl"
-          >
-            What about my experience?
-          </h3>
-          <p
-            class="font-hand text-black mt-4 mb-9 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
-          >
-            What can I say? A young guy with a lack of experience, but with a
-            love of programming, especially frontend development, who dreams of
-            becoming a junior developer. You can see my home project. You can
-            see my resume. You can evaluate me on my skills. But you can also
-            give me a chance and not regret it.
-          </p>
-        </div>
-      </section>
-
-      <!-- CONTACTS SECTION -->
-
-      <section
-        class="h-full bg-black flex flex-col p-5 items-center justify-center"
+    <section
+      id="s1"
+      name="about"
+      class="h-full bg-white flex flex-col p-10 landscape:flex-row"
+    >
+      <div
+        id="about-div"
+        class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
+      ></div>
+      <div
+        class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
       >
-        <h3 class="font-hand text-white font-bold text-2xl text-center">
-          You can find me
+        <h3
+          class="font-hand text-black font-bold text-3xl text-center sm:text-4xl"
+        >
+          Who am I?
         </h3>
-        <div class="flex flex-col mt-4">
-          <div class="flex flex-1 flex-col items-center">
-            <h4 class="font-hand text-white font-bold text-xl text-center">
-              Social
-            </h4>
-            <div class="flex justify-center p-5">
-              <img
-                class="w-5 h-auto mx-2"
-                src="./img/SVG/icons/facebook.svg"
-                alt="icon"
-              />
-              <img
-                class="w-5 h-auto mx-2"
-                src="./img/SVG/icons/telegram (1).svg"
-                alt="icon"
-              />
-              <img
-                class="w-5 h-auto mx-2"
-                src="./img/SVG/icons/instagram-logo.svg"
-                alt="icon"
-              />
-              <img
-                class="w-5 h-auto mx-2"
-                src="./img/SVG/icons/linkedin.svg"
-                alt="icon"
-              />
-            </div>
-          </div>
-          <div class="flex flex-1 flex-col items-center mt-1">
-            <h4 class="font-hand text-white font-bold text-xl text-center">
-              Contacts
-            </h4>
-            <div class="flex mt-4">
-              <img
-                class="w-5 h-auto mx-2"
-                src="./img/SVG/icons/call.svg"
-                alt="phone"
-              />
-              <h5 class="font-hand text-white text-sm">+38(068)-015-93-27</h5>
-            </div>
-            <div class="flex mt-4">
-              <img
-                class="w-5 h-auto mx-2"
-                src="./img/SVG/icons/email.svg"
-                alt="mail"
-              />
-              <h5 class="font-hand text-white text-sm">leusniko@gmail.com</h5>
-            </div>
-            <div class="flex mt-4">
-              <img
-                class="w-5 h-auto mx-2"
-                src="./img/SVG/icons/pin.svg"
-                alt="phone"
-              />
-              <h5 class="font-hand text-white text-sm">Ukraine, Kyiv</h5>
-            </div>
+        <p
+          class="font-hand text-black mt-4 mb-8 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
+        >
+          What can I say? A young guy with a lack of experience, but with a love
+          of programming, especially frontend development, who dreams of
+          becoming a junior developer. You can see my home project. You can see
+          my resume. You can evaluate me on my skills. But you can also give me
+          a chance and not regret it.
+        </p>
+      </div>
+    </section>
+
+    <!-- MY SKILLS> SECTION -->
+
+    <section
+      id="s2"
+      name="skills"
+      class="h-full bg-black flex flex-col p-10 landscape:flex-row"
+    >
+      <div
+        id="skills-div"
+        class="flex flex-grow justify-center order-2 landscape:order-1 landscape:flex-1"
+      ></div>
+      <div class="flex flex-col landscape:flex-1 landscape:justify-center">
+        <h3
+          class="font-hand text-white font-bold text-3xl text-center sm:text-4xl"
+        >
+          What about my skils?
+        </h3>
+        <p
+          class="font-hand text-white mt-4 mb-8 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
+        >
+          What can I say? A young guy with a lack of experience, but with a love
+          of programming, especially frontend development, who dreams of
+          becoming a junior developer. You can see my home project. You can see
+          my resume. You can evaluate me on my skills. But you can also give me
+          a chance and not regret it.
+        </p>
+      </div>
+    </section>
+
+    <!-- MY EXPERIENCE SECTION -->
+
+    <section
+      id="s3"
+      name="experience"
+      class="h-full bg-white flex flex-col p-10 landscape:flex-row"
+    >
+      <div
+        id="exp-div"
+        class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
+      ></div>
+      <div
+        class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1"
+      >
+        <h3
+          class="font-hand text-black font-bold text-3xl text-center sm:text-4xl"
+        >
+          What about my experience?
+        </h3>
+        <p
+          class="font-hand text-black mt-4 mb-9 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
+        >
+          What can I say? A young guy with a lack of experience, but with a love
+          of programming, especially frontend development, who dreams of
+          becoming a junior developer. You can see my home project. You can see
+          my resume. You can evaluate me on my skills. But you can also give me
+          a chance and not regret it.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACTS SECTION -->
+
+    <section
+      id="s4"
+      name="contacts"
+      class="h-full bg-black flex flex-col p-5 items-center justify-center"
+    >
+      <h3 class="font-hand text-white font-bold text-2xl text-center">
+        You can find me
+      </h3>
+      <div class="flex flex-col mt-4">
+        <div class="flex flex-1 flex-col items-center">
+          <h4 class="font-hand text-white font-bold text-xl text-center">
+            Social
+          </h4>
+          <div class="flex justify-center p-5">
+            <img
+              class="w-5 h-auto mx-2"
+              src="./img/SVG/icons/facebook.svg"
+              alt="icon"
+            />
+            <img
+              class="w-5 h-auto mx-2"
+              src="./img/SVG/icons/telegram (1).svg"
+              alt="icon"
+            />
+            <img
+              class="w-5 h-auto mx-2"
+              src="./img/SVG/icons/instagram-logo.svg"
+              alt="icon"
+            />
+            <img
+              class="w-5 h-auto mx-2"
+              src="./img/SVG/icons/linkedin.svg"
+              alt="icon"
+            />
           </div>
         </div>
-      </section>
-    </main>
+        <div class="flex flex-1 flex-col items-center mt-1">
+          <h4 class="font-hand text-white font-bold text-xl text-center">
+            Contacts
+          </h4>
+          <div class="flex mt-4">
+            <img
+              class="w-5 h-auto mx-2"
+              src="./img/SVG/icons/call.svg"
+              alt="phone"
+            />
+            <h5 class="font-hand text-white text-sm">+38(068)-015-93-27</h5>
+          </div>
+          <div class="flex mt-4">
+            <img
+              class="w-5 h-auto mx-2"
+              src="./img/SVG/icons/email.svg"
+              alt="mail"
+            />
+            <h5 class="font-hand text-white text-sm">leusniko@gmail.com</h5>
+          </div>
+          <div class="flex mt-4">
+            <img
+              class="w-5 h-auto mx-2"
+              src="./img/SVG/icons/pin.svg"
+              alt="phone"
+            />
+            <h5 class="font-hand text-white text-sm">Ukraine, Kyiv</h5>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
-      type="text/javascript"
       crossorigin
       src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js"
     ></script>
@@ -230,34 +245,27 @@
         file: "./img/SVG/xp_1.svg",
       });
     </script>
-    <script type="text/javascript">
-      // Get the position on the page of the SVG
-      var svgLocation = document
-        .getElementById("about")
-        .getBoundingClientRect();
-
-      // Scroll offset that triggers animation start.
-      // In this case it is the bottom of the SVG.
-      var offsetToTriggerAnimation = svgLocation.y + svgLocation.height;
-
-      // Function to handle the scroll event.
-      // Add an event handler to the document for the "onscroll" event
-      function scrollAnimTriggerCheck(evt) {
-        var viewBottom = window.scrollY + window.innerHeight;
-        if (viewBottom > offsetToTriggerAnimation) {
+    <script type="module">
+      import onePageScroll from "./one-page-scroll.esm.js";
+      var el = document.querySelectorAll("section");
+      var app = new onePageScroll({
+        el: el,
+        loop: false,
+        time: 1000,
+        easing: "ease-out",
+        throttling: 300,
+      });
+      let arr = [...el];
+      arr.forEach((elem) => {
+        elem.addEventListener("inview", function () {
+          console.log(elem.id);
           let count = document.getElementsByTagName("animate").length;
-          console.log(count);
-          // Start the SMIL animation
-          for (i = 0; i < count; i++) {
+          for (let i = 0; i < count; i++) {
             document.getElementById(`anim_${i}`).beginElement();
           }
-          // Remove the event handler so it doesn't trigger again
-          document.removeEventListener("scroll", scrollAnimTriggerCheck);
-        }
-      }
-
-      // Add an event handler to the document for the "onscroll" event
-      document.addEventListener("scroll", scrollAnimTriggerCheck);
+        });
+        elem.removeEventListener("inview");
+      });
     </script>
   </body>
 </html>
