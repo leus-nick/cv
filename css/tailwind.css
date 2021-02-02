@@ -5,6 +5,15 @@
   @apply stroke-current text-white;
 }
 
+#aboutsvg * {
+  fill-opacity: 0;
+  transition: fill-opacity 2500ms;
+}
+
+#aboutsvg.finished * {
+  fill-opacity: 1;
+}
+
 @tailwind utilities;
 
 @media (orientation: landscape) and (max-width: 950px) {

@@ -13,7 +13,7 @@
   </head>
   <body class="box-border h-full">
     <section
-      id="s0"
+      id="s1"
       name="hello"
       class="w-full h-full bg-black flex flex-col p-5"
     >
@@ -64,7 +64,7 @@
     <!-- WHO AM I SECTION -->
 
     <section
-      id="s1"
+      id="s2"
       name="about"
       class="h-full bg-white flex flex-col p-10 landscape:flex-row"
     >
@@ -95,7 +95,7 @@
     <!-- MY SKILLS> SECTION -->
 
     <section
-      id="s2"
+      id="s3"
       name="skills"
       class="h-full bg-black flex flex-col p-10 landscape:flex-row"
     >
@@ -124,7 +124,7 @@
     <!-- MY EXPERIENCE SECTION -->
 
     <section
-      id="s3"
+      id="s4"
       name="experience"
       class="h-full bg-white flex flex-col p-10 landscape:flex-row"
     >
@@ -155,7 +155,7 @@
     <!-- CONTACTS SECTION -->
 
     <section
-      id="s4"
+      id="s5"
       name="contacts"
       class="h-full bg-black flex flex-col p-5 items-center justify-center"
     >
@@ -226,45 +226,64 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js"
     ></script>
     <script type="text/javascript">
-      new Vivus("about-div", {
+      const aboutSVG = new Vivus(
+        "about-div",
+        {
+          duration: 200,
+          type: "sync",
+          pathTimingFunction: Vivus.EASE_IN,
+          file: "./img/SVG/about_1.svg",
+        },
+        (obj) => {
+          obj.el.classList.add("finished");
+        }
+      );
+      const skillsSVG = new Vivus("skills-div", {
         duration: 200,
         type: "sync",
-        pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
-        file: "./img/SVG/about.svg",
-      });
-      new Vivus("skills-div", {
-        duration: 200,
-        type: "sync",
-        pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
+        pathTimingFunction: Vivus.EASE_IN,
         file: "./img/SVG/skills_1.svg",
       });
-      new Vivus("exp-div", {
+      const expSVG = new Vivus("exp-div", {
         duration: 200,
         type: "sync",
-        pathTimingFunction: Vivus.EASE_OUT_BOUNCE,
+        pathTimingFunction: Vivus.EASE_IN,
         file: "./img/SVG/xp_1.svg",
       });
     </script>
     <script type="module">
       import onePageScroll from "./one-page-scroll.esm.js";
-      var el = document.querySelectorAll("section");
-      var app = new onePageScroll({
+      let drawn = false;
+      let el = document.querySelectorAll("section");
+      let app = new onePageScroll({
         el: el,
         loop: false,
         time: 1000,
         easing: "ease-out",
         throttling: 300,
       });
-      let arr = [...el];
-      arr.forEach((elem) => {
-        elem.addEventListener("inview", function () {
-          console.log(elem.id);
-          let count = document.getElementsByTagName("animate").length;
-          for (let i = 0; i < count; i++) {
-            document.getElementById(`anim_${i}`).beginElement();
-          }
-        });
-        elem.removeEventListener("inview");
+      app.goto(1);
+
+      [...el].map((elem) => {
+        switch (elem.id) {
+          case "s2":
+            elem.addEventListener("inview", () => {
+              aboutSVG.play(1);
+            });
+            break;
+          case "s3":
+            elem.addEventListener("inview", () => {
+              skillsSVG.play(1);
+            });
+            break;
+          case "s4":
+            elem.addEventListener("inview", () => {
+              expSVG.play(1);
+            });
+            break;
+          default:
+            break;
+        }
       });
     </script>
   </body>
