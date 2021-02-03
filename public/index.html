@@ -66,28 +66,32 @@
     <section
       id="s2"
       name="about"
-      class="h-full bg-white flex flex-col p-10 landscape:flex-row"
+      class="h-full bg-white flex flex-col p-5 landscape:flex-row"
     >
       <div
         id="about-div"
         class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
       ></div>
       <div
-        class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
+        class="py-10 flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
       >
+        <div
+          id="circle_1-div"
+          class="hidden absolute top-0 left-0 w-full h-full lg:block"
+        ></div>
         <h3
           class="font-hand text-black font-bold text-3xl text-center sm:text-4xl"
         >
           Who am I?
         </h3>
         <p
-          class="font-hand text-black mt-4 mb-8 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
+          class="font-hand text-black mt-4 mb-8 text-sm sm:text-lg md:px-24 xl:px-32 paragraphText"
         >
           What can I say? A young guy with a lack of experience, but with a love
           of programming, especially frontend development, who dreams of
           becoming a junior developer. You can see my home project. You can see
           my resume. You can evaluate me on my skills. But you can also give me
-          a chance and not regret it.
+          a chance and not regret.
         </p>
       </div>
     </section>
@@ -97,26 +101,32 @@
     <section
       id="s3"
       name="skills"
-      class="h-full bg-black flex flex-col p-10 landscape:flex-row"
+      class="h-full bg-black flex flex-col p-5 landscape:flex-row"
     >
       <div
         id="skills-div"
         class="flex flex-grow justify-center order-2 landscape:order-1 landscape:flex-1"
       ></div>
-      <div class="flex flex-col landscape:flex-1 landscape:justify-center">
+      <div
+        class="py-10 flex flex-col landscape:flex-1 landscape:justify-center relative"
+      >
+        <div
+          id="circle_2-div"
+          class="hidden absolute top-0 left-0 w-full h-full lg:block"
+        ></div>
         <h3
           class="font-hand text-white font-bold text-3xl text-center sm:text-4xl"
         >
           What about my skils?
         </h3>
         <p
-          class="font-hand text-white mt-4 mb-8 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
+          class="font-hand text-white mt-4 mb-8 text-sm sm:text-lg md:px-24 xl:px-32 paragraphText"
         >
           What can I say? A young guy with a lack of experience, but with a love
           of programming, especially frontend development, who dreams of
           becoming a junior developer. You can see my home project. You can see
           my resume. You can evaluate me on my skills. But you can also give me
-          a chance and not regret it.
+          a chance and not regret.
         </p>
       </div>
     </section>
@@ -126,28 +136,32 @@
     <section
       id="s4"
       name="experience"
-      class="h-full bg-white flex flex-col p-10 landscape:flex-row"
+      class="h-full bg-white flex flex-col p-5 landscape:flex-row"
     >
       <div
         id="exp-div"
         class="order-2 flex flex-grow justify-center landscape:order-1 landscape:flex-1"
       ></div>
       <div
-        class="flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1"
+        class="py-10 flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
       >
+        <div
+          id="circle_3-div"
+          class="hidden absolute top-0 left-0 w-full h-full lg:block"
+        ></div>
         <h3
           class="font-hand text-black font-bold text-3xl text-center sm:text-4xl"
         >
           What about my experience?
         </h3>
         <p
-          class="font-hand text-black mt-4 mb-9 text-sm sm:text-lg md:px-24 lg:px-32 paragraphText"
+          class="font-hand text-black mt-4 mb-9 text-sm sm:text-lg md:px-24 xl:px-32 paragraphText"
         >
           What can I say? A young guy with a lack of experience, but with a love
           of programming, especially frontend development, who dreams of
           becoming a junior developer. You can see my home project. You can see
           my resume. You can evaluate me on my skills. But you can also give me
-          a chance and not regret it.
+          a chance and not regret.
         </p>
       </div>
     </section>
@@ -238,17 +252,47 @@
           obj.el.classList.add("finished");
         }
       );
-      const skillsSVG = new Vivus("skills-div", {
+      const skillsSVG = new Vivus(
+        "skills-div",
+        {
+          duration: 200,
+          type: "sync",
+          pathTimingFunction: Vivus.EASE_IN,
+          file: "./img/SVG/skills_1.svg",
+        },
+        (obj) => {
+          obj.el.classList.add("finished");
+        }
+      );
+      const expSVG = new Vivus(
+        "exp-div",
+        {
+          duration: 200,
+          type: "sync",
+          pathTimingFunction: Vivus.EASE_IN,
+          file: "./img/SVG/xp_1.svg",
+        },
+        (obj) => {
+          obj.el.classList.add("finished");
+        }
+      );
+      const circle_1 = new Vivus("circle_1-div", {
         duration: 200,
         type: "sync",
         pathTimingFunction: Vivus.EASE_IN,
-        file: "./img/SVG/skills_1.svg",
+        file: "./img/SVG/circles/circle_1.svg",
       });
-      const expSVG = new Vivus("exp-div", {
+      const circle_2 = new Vivus("circle_2-div", {
         duration: 200,
         type: "sync",
         pathTimingFunction: Vivus.EASE_IN,
-        file: "./img/SVG/xp_1.svg",
+        file: "./img/SVG/circles/circle_2.svg",
+      });
+      const circle_3 = new Vivus("circle_3-div", {
+        duration: 200,
+        type: "sync",
+        pathTimingFunction: Vivus.EASE_IN,
+        file: "./img/SVG/circles/circle_3.svg",
       });
     </script>
     <script type="module">
@@ -269,16 +313,19 @@
           case "s2":
             elem.addEventListener("inview", () => {
               aboutSVG.play(1);
+              // circle_1.play(3);
             });
             break;
           case "s3":
             elem.addEventListener("inview", () => {
               skillsSVG.play(1);
+              // circle_2.play(3);
             });
             break;
           case "s4":
             elem.addEventListener("inview", () => {
               expSVG.play(1);
+              // circle_3.play(3);
             });
             break;
           default:

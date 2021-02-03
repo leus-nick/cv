@@ -1,16 +1,31 @@
 @tailwind base;
 @tailwind components;
 
-#skills-div > svg {
-  @apply stroke-current text-white;
-}
-
 #aboutsvg * {
   fill-opacity: 0;
   transition: fill-opacity 2500ms;
 }
 
 #aboutsvg.finished * {
+  fill-opacity: 1;
+}
+
+#skillssvg * {
+  fill-opacity: 0;
+  transition: fill-opacity 2500ms;
+  stroke: white;
+}
+
+#skillssvg.finished * {
+  fill-opacity: 1;
+}
+
+#expsvg * {
+  fill-opacity: 0;
+  transition: fill-opacity 2500ms;
+}
+
+#expsvg.finished * {
   fill-opacity: 1;
 }
 
