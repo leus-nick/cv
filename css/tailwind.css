@@ -1,6 +1,12 @@
 @tailwind base;
 @tailwind components;
 
+.link {
+  background: url(../img/SVG/icons/link.svg) center right no-repeat;
+  background-size: 18px 18px;
+  padding-right: 25px;
+}
+
 #aboutsvg * {
   fill-opacity: 0;
   transition: fill-opacity 2500ms;

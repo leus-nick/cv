@@ -26,7 +26,7 @@
         <div class="flex-1 flex flex-col items-center p-10 landscape:p-0">
           <img
             class="rounded-full object-cover w-9/2 img landscape:w-2/3"
-            src="./img/IMG_7922-1(2).jpg"
+            src="./img/IMG_2777.png"
             alt="a photo of the man"
           />
           <div class="flex flex-col items-center mt-8 landscape:hidden">
@@ -75,10 +75,6 @@
       <div
         class="py-10 flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
       >
-        <div
-          id="circle_1-div"
-          class="hidden absolute top-0 left-0 w-full h-full lg:block"
-        ></div>
         <h3
           class="font-hand text-black font-bold text-3xl text-center sm:text-4xl"
         >
@@ -89,9 +85,9 @@
         >
           What can I say? A young guy with a lack of experience, but with a love
           of programming, especially frontend development, who dreams of
-          becoming a junior developer. You can see my home project. You can see
-          my resume. You can evaluate me on my skills. But you can also give me
-          a chance and not regret.
+          becoming a professional developer. You can see my home project. You
+          can see my resume. You can evaluate me on my skills. But you can also
+          give me a chance and not regret it.
         </p>
       </div>
     </section>
@@ -110,10 +106,6 @@
       <div
         class="py-10 flex flex-col landscape:flex-1 landscape:justify-center relative"
       >
-        <div
-          id="circle_2-div"
-          class="hidden absolute top-0 left-0 w-full h-full lg:block"
-        ></div>
         <h3
           class="font-hand text-white font-bold text-3xl text-center sm:text-4xl"
         >
@@ -122,11 +114,12 @@
         <p
           class="font-hand text-white mt-4 mb-8 text-sm sm:text-lg md:px-24 xl:px-32 paragraphText"
         >
-          What can I say? A young guy with a lack of experience, but with a love
-          of programming, especially frontend development, who dreams of
-          becoming a junior developer. You can see my home project. You can see
-          my resume. You can evaluate me on my skills. But you can also give me
-          a chance and not regret.
+          First of all, a good knowledge of HTML, CSS and JavaScript, of course.
+          ReactJs - upper-intermediate level. Also a basic understanding of
+          TypeScript and NodeJs. Knowledge of Sass and the Tailwind framework is
+          also present. Ability to work with Git and set up Webpack.
+          Understanding of OOP principles. Experience with databases (MongoDB,
+          SQL). Also experience with Firebase.
         </p>
       </div>
     </section>
@@ -145,10 +138,6 @@
       <div
         class="py-10 flex flex-col landscape:justify-center landscape:order-2 landscape:flex-1 relative"
       >
-        <div
-          id="circle_3-div"
-          class="hidden absolute top-0 left-0 w-full h-full lg:block"
-        ></div>
         <h3
           class="font-hand text-black font-bold text-3xl text-center sm:text-4xl"
         >
@@ -157,11 +146,21 @@
         <p
           class="font-hand text-black mt-4 mb-9 text-sm sm:text-lg md:px-24 xl:px-32 paragraphText"
         >
-          What can I say? A young guy with a lack of experience, but with a love
-          of programming, especially frontend development, who dreams of
-          becoming a junior developer. You can see my home project. You can see
-          my resume. You can evaluate me on my skills. But you can also give me
-          a chance and not regret.
+          It is true that I have no commercial experience. I have only a little
+          freelancing experience - I developed a chat for a small financial
+          company (at that time I was not yet using the git, so I have no
+          sources of this project). Also I have a pet project, which you can see
+          in my
+          <a
+            class="font-bold link"
+            href="https://github.com/leus-nick/foodiary_v2"
+            >github</a
+          >
+          and here
+          <a class="font-bold link" href="https://foodiary.club"
+            >https://foodiary.club</a
+          >
+          .
         </p>
       </div>
     </section>
@@ -235,6 +234,17 @@
         </div>
       </div>
     </section>
+    <!-- CONTACTS SECTION -->
+
+    <section
+      id="s5"
+      name="contacts"
+      class="h-full bg-white flex flex-col p-5 items-center justify-center"
+    >
+      <h3 class="font-hand text-black font-bold text-2xl text-center">
+        I don't want to end up with a black screen, so here's another white one ;)
+      </h3>
+    </section>
     <script
       crossorigin
       src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.5/vivus.min.js"
@@ -276,24 +286,6 @@
           obj.el.classList.add("finished");
         }
       );
-      const circle_1 = new Vivus("circle_1-div", {
-        duration: 200,
-        type: "sync",
-        pathTimingFunction: Vivus.EASE_IN,
-        file: "./img/SVG/circles/circle_1.svg",
-      });
-      const circle_2 = new Vivus("circle_2-div", {
-        duration: 200,
-        type: "sync",
-        pathTimingFunction: Vivus.EASE_IN,
-        file: "./img/SVG/circles/circle_2.svg",
-      });
-      const circle_3 = new Vivus("circle_3-div", {
-        duration: 200,
-        type: "sync",
-        pathTimingFunction: Vivus.EASE_IN,
-        file: "./img/SVG/circles/circle_3.svg",
-      });
     </script>
     <script type="module">
       import onePageScroll from "./one-page-scroll.esm.js";
@@ -313,19 +305,16 @@
           case "s2":
             elem.addEventListener("inview", () => {
               aboutSVG.play(1);
-              // circle_1.play(3);
             });
             break;
           case "s3":
             elem.addEventListener("inview", () => {
               skillsSVG.play(1);
-              // circle_2.play(3);
             });
             break;
           case "s4":
             elem.addEventListener("inview", () => {
               expSVG.play(1);
-              // circle_3.play(3);
             });
             break;
           default:
