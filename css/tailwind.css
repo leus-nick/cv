@@ -39,6 +39,6 @@
 
 @media (orientation: landscape) and (max-width: 950px) {
   .paragraphText {
-    @apply text-xs !important;
+    @apply text-xs px-6 !important;
   }
 }

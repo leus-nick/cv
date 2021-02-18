@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "foodiary-42a16"
+  },
+  "targets": {
+    "foodiary-42a16": {
+      "hosting": {
+        "nickdeveloper": [
+          "nickdeveloper"
+        ]
+      }
+    }
+  }
+}
